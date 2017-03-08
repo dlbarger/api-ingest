@@ -1,0 +1,4 @@
+BEGIN;
+CREATE TABLE "app_model_ingest_configs" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "data_source_name" varchar(60) NOT NULL, "data_source_descr" varchar(254) NOT NULL, "ingest_url" varchar(200) NOT NULL, "ingest_type" integer NOT NULL, "access_key_label" varchar(30) NOT NULL, "access_key_value" varchar(254) NOT NULL, "ingest_format" integer NOT NULL);
+
+COMMIT;

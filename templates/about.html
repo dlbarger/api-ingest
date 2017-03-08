@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+<!-- About section begins her -->
+{% block content %}
+
+<div class="content">
+    <h3>Public Environmental Data Ingestion application</h3>
+    <h5>Version 1.0 2016</h5>
+    <p>
+        The Public Environmental Data Ingestion application was created for the purpose of extracting publicly available data from
+        public environmental and safety agencies.  The agencies include the U.S. Food & Drug Administration, Environmental Protection Agency
+        and the Department of Labor (OSHA).  Authorized users can select a pre-defined public site and refresh data on demand.
+    </p>
+    <p>
+        Authorized users can easily add new public sites to the application using the soluton's Administration console.  In order to add a site,
+        the user must have the site's URL address, the default output format (i.e. json, csv) as defined by the site, and an understanding how
+        the site provides access to its data.  The application supports three ingestion methods:  1) HTTP Request, 2) Web Service and 3) File
+        Download.  The HTTP Request and Web Service methods are similar.  With the HTTP Request, a security access key must be sent to the
+        site prior to accessing the site's url for data extraction.  With a Web Service method, the access key can be embedded inside the
+        url.  Every public site providing API access to data will indicate the required method.
+    </p>
+
+</div>
+{% endblock %}

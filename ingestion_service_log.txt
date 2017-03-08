@@ -1,0 +1,3 @@
+02/14/2017 14:13:41:  STATUS - Ingestion process started: http://download.open.fda.gov/food/enforcement/food-enforcement-0001-of-0001.json.zip
+02/14/2017 14:13:41:  STATUS - File downloaded: ./data/food-enforcement-0001-of-0001.json.zip
+02/14/2017 14:13:41:  STATUS - Process complete

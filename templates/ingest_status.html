@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+<!-- Ingest Status logic begins here -->
+{% block content %}
+
+<div class="content">
+    <h3>Public Environmental Data Ingestion Status</h3>
+
+    {% for item in status %}
+    <p>{{ item }}</p>
+    {% endfor %}
+
+    <h4>
+        Data ingestion process is complete. <a href="/index/">Click here</a> to return to home.
+    </h4>
+
+</div>
+
+{% endblock %}

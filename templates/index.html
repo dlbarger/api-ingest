@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+<!-- Index section begins her -->
+{% block content %}
+
+<div class="content">
+    <h3>Accessing Public Environmental Data</h3>
+    <p>
+        The following public web sites are commonly used for data analysis of food product quality and safety issues.
+        The sites have been configured within the application for data extraction. Click the desired site name to begin the ingestion process.
+        You will have an opportunity to review the site's configuration parameters before extracting data.
+    </p>
+    <hr>
+
+    <!-- Dynamically list available public urls -->
+    <h4>Public Sites Available for Data Extraction</h4>
+
+    <table cellpadding="5">
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+        {% for item in sites %}
+        <tr>
+            <!-- <td><a href="/ingest/?parm={{ item.data_source_name }}">{{item.data_source_name}}</a></td> -->
+            <td><a href="/ingest/?id={{item.id}}">{{item.data_source_name}}</a> </td>
+            <td>{{item.data_source_descr}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}

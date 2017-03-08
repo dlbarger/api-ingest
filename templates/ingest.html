@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+<!-- Ingest section begins her -->
+{% block content %}
+
+<div class="content">
+    <h3>Starting the Data Ingestion Process</h3>
+    <p>
+        Listed below are the configuration parameters for {{ item.data_source_name }} public site.  Please review all parameters
+        to ensure each is correct before starting the data ingestion process.  If changes are needed, click the "Administration" menu option
+        and update the desired parameter.
+    </p>
+    <hr>
+    <!-- Display selected data source configuration -->
+
+    <h4>Configuration Parameters</h4>
+
+    <table style="text-align:left;font-color:#666;font-size:12px">
+
+        {% for item in values %}
+
+        <tr>
+            <th>ID</th>
+            <td>{{item.id}}</td>
+        </tr>
+        <tr>
+            <th>Data Source Name</th>
+            <td>{{item.data_source_name}}</td>
+        </tr>
+        <tr>
+            <th>Data Source Description</th>
+            <td>{{item.data_source_descr}}</td>
+        </tr>
+        <tr>
+            <th>Site URL</th>
+            <td>{{item.ingest_url}}</td>
+        </tr>
+        <tr>
+            <th>Ingestion Type</th>
+            <td>{{item.ingest_type}}</td>
+        </tr>
+        <tr>
+            <th>Access Key Label</th>
+            <td>{{item.access_key_label}}</td>
+        </tr>
+        <tr>
+            <th>Access Key Value</th>
+            <td>{{item.access_key_value}}</td>
+        </tr>
+        <tr>
+            <th>Output Format</th>
+            <td>{{item.ingest_format}}</td>
+        </tr>
+
+    </table>
+
+    <h4>Start Data Ingestion Process</h4>
+    <p>Click "Start Ingestion" to begin the process.</p>
+
+    <!-- Start Ingeston button -->
+    <form action="/ingest_status/" style="color:blue;width=200px">
+        <input type="hidden" name="data_src_id" value="{{ item.id }}">
+        <input type="submit" value="Start Ingestion">
+    </form>
+    <br>
+    <!-- Cancel Ingestion button -->
+    <p>Click "Cancel Ingestion" to return to the home page.</p>
+    <form action="/index/" style="color:red;width=200px">
+        <input type="submit" value="Cancel Ingestion">
+    </form>
+
+    {% endfor %}
+
+</div>
+{% endblock %}

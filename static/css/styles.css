@@ -1,0 +1,104 @@
+/*
+    Style Configurations for standard and custom selectors
+
+    Color Hex Format:  #rrggbb
+    - rr = red
+    - gg = green
+    - bb = blue
+    - Brightness (Full to none): ff, cc, 99, 66, 33, 00
+
+*/
+
+/*
+div.heading {
+    background-color: #417690;
+    padding-top: 0%
+}
+
+img.logo {
+    float: left;
+    width: 90px;
+    height: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial','serif';
+}
+.nav {
+    /*background-color:#ffffff;
+    color: #000000; */
+    background-color: #417690;
+    color: white;
+    list-style: none;
+    text-align: right;
+    padding: 20px 0px 20px 0px;
+}
+
+.nav > li {
+    display: inline-block;
+    padding; 0 25px 0 25px;
+    font-size: 14px;
+    margin-right: 50px;
+}
+
+.nav > li > a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.logo {
+    color: #ffc;
+    float: left;
+    padding-left: 25px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.content {
+    background-color: #ffffff;
+    text-align: left;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 5px; 5px; 5px; 5px;
+}
+
+.content > h3 {
+    color: #666;
+}
+
+.content > h4 {
+    color: #666;
+}
+
+.content > p {
+    color: #666;
+    font-size: 14px;
+}
+
+#div.table{
+    /*border: 1px #666;*/
+    margin-left: 100px;
+    margin-right: 1000px
+    padding: 5px; 5px; 5px; 5px;
+    font-color: #666;
+}
+
+#div.th{
+    font-color: #666
+    font-size: 14px;
+}
+
+#div.td {
+    font-color: #666;
+    font-size: 14px;
+}
+
+
+
+
